@@ -1,9 +1,9 @@
 PODS:
-  - Alamofire (4.0.1)
+  - Alamofire (4.4.0)
   - FLNetworkManager (0.1.0):
-    - Alamofire (~> 4.0.1)
-    - SwiftyJSON (= 3.0.0)
-  - SwiftyJSON (3.0.0)
+    - Alamofire (~> 4.4)
+    - SwiftyJSON (= 3.1.4)
+  - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
   - FLNetworkManager (from `../`)
@@ -13,9 +13,9 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
-  FLNetworkManager: e8fff8608d1113d56b065eceda44c6975277e124
-  SwiftyJSON: f57b2b44bc166617372d1c70773591fe9f0f5fd4
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  FLNetworkManager: c1e13c702a36f3fda5b48001cfe849f74b9fc858
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
 PODFILE CHECKSUM: 06f9073eebdafcdadf4232328ea8f62ee1763b2e
 
