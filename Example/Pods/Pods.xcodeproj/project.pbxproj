@@ -11,6 +11,8 @@
 		079C5A281EB897EB00D573D7 /* FLMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079C5A241EB8976500D573D7 /* FLMeta.swift */; };
 		079C5A2F1EB8990000D573D7 /* FLError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079C5A2B1EB898D100D573D7 /* FLError.swift */; };
 		079C5A301EB8990300D573D7 /* FLErrorJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079C5A2C1EB898D100D573D7 /* FLErrorJSON.swift */; };
+		079C5A6E1EB9371300D573D7 /* FLBaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079C5A6D1EB9371300D573D7 /* FLBaseRequest.swift */; };
+		079C5A701EB9374400D573D7 /* FLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079C5A6F1EB9374400D573D7 /* FLConstants.swift */; };
 		10EB23E9ECC4B33E16933BB1EA560B6A /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D182500FF4918391F97385DAE996449 /* Timeline.swift */; };
 		1B9EDEDC964E6B08F78920B4F4B9DB84 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 94276CF887593FC21A638F4E2F1F4A42 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2B28768D3F719CA05DD139CCE796C8E2 /* Pods-FLNetworkManager_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AB563462F01BFD2A07466F148450C002 /* Pods-FLNetworkManager_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -28,7 +30,6 @@
 		7CC1BB053DCF0ACF8C15670746644015 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C208BD2418B38199D932444228512CF /* Foundation.framework */; };
 		7D8CC01E8C9EFFF9F4D65406CDE0AB66 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA5CA9C1A1A8A10FA0F34E068E281AB /* Result.swift */; };
 		89316FB0D418818FAD87A2E13CD34789 /* Pods-FLNetworkManager_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BD84BBF031013E4C8F718A156DB71666 /* Pods-FLNetworkManager_Example-dummy.m */; };
-		99ED7F68A691E1DAFAA349A622E0BF20 /* FLDataCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4DED0F345B4A53076DE0BAE0EBB36C /* FLDataCenter.swift */; };
 		9ED2BB2981896E0A39EFA365503F58CE /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6FA20699EAC0AB72A507BB66B191F8 /* AFError.swift */; };
 		A2A6F71B727312BD45CC7A4AAD7B0AB7 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7857033CB003F852F367D6BC6CA97425 /* NetworkReachabilityManager.swift */; };
 		A388DB8F04325C2CF6FFC23DB362ED81 /* FLNetworkManager-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B040A7FD597DF4D356C0E607D52CF414 /* FLNetworkManager-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -44,7 +45,7 @@
 		DAE35DDC4EC4C940C3982522F72529C9 /* Pods-FLNetworkManager_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C1255B7A4EC108F08D3EB8B8E0B8E7A5 /* Pods-FLNetworkManager_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E6CC5CD5EA52CCB6F870C941C0FCF84A /* Pods-FLNetworkManager_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 00BA71A261BFDE17B92B736A15276090 /* Pods-FLNetworkManager_Tests-dummy.m */; };
 		EFD264FC408EBF3BA2528E70B08DDD94 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09922B86810418CDE6DD69710D5A9C17 /* Notifications.swift */; };
-		F40334C736588F3EE5102C4735C92FC3 /* FLDataCenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500D680FE79BA6C014A18544B9A75C2F /* FLDataCenterProtocol.swift */; };
+		F40334C736588F3EE5102C4735C92FC3 /* FLDataCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500D680FE79BA6C014A18544B9A75C2F /* FLDataCenter.swift */; };
 		F6BECD98B97CBFEBE2C96F0E9E72A6C0 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EFF0A773A9B68F8036680922E55A8F /* ResponseSerialization.swift */; };
 		F8B3D3092ED0417E8CDF32033F6122F5 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26FB4343C43368E1D119B6871123AF1 /* Alamofire.swift */; };
 		F916BDF5D6F777CB606C9687DD6C8AFF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C208BD2418B38199D932444228512CF /* Foundation.framework */; };
@@ -96,6 +97,8 @@
 		079C5A2A1EB898D100D573D7 /* ErrorCodes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ErrorCodes.json; sourceTree = "<group>"; };
 		079C5A2B1EB898D100D573D7 /* FLError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLError.swift; sourceTree = "<group>"; };
 		079C5A2C1EB898D100D573D7 /* FLErrorJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLErrorJSON.swift; sourceTree = "<group>"; };
+		079C5A6D1EB9371300D573D7 /* FLBaseRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLBaseRequest.swift; sourceTree = "<group>"; };
+		079C5A6F1EB9374400D573D7 /* FLConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLConstants.swift; sourceTree = "<group>"; };
 		09922B86810418CDE6DD69710D5A9C17 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
 		09EAE636401C4F39AAF07805883E610C /* Pods_FLNetworkManager_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FLNetworkManager_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B87623B762E3842D371E8B9800B2706 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,7 +115,7 @@
 		332F6B9EA5D63A221428D82DFC754F83 /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
 		352BE6BCD241A70CD0B3BE51D15D1216 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B3964DD5C9427FAD4341C6D5EDC77E3 /* Pods-FLNetworkManager_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-FLNetworkManager_Example.modulemap"; sourceTree = "<group>"; };
-		500D680FE79BA6C014A18544B9A75C2F /* FLDataCenterProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FLDataCenterProtocol.swift; sourceTree = "<group>"; };
+		500D680FE79BA6C014A18544B9A75C2F /* FLDataCenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FLDataCenter.swift; sourceTree = "<group>"; };
 		528E562585A62419BE7EABB7AF5E1AA7 /* Pods-FLNetworkManager_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FLNetworkManager_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		5933A0580629CB79BDBD1D33483297F5 /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
 		59813A10148C7814D6D75085C1537A28 /* FLNetworkManager.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = FLNetworkManager.modulemap; sourceTree = "<group>"; };
@@ -122,7 +125,6 @@
 		6C7A7D59632F2FAD5FE823656DB91D2A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		727FD8DD47B78BFAD26B45351AF67F00 /* Pods-FLNetworkManager_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FLNetworkManager_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		7857033CB003F852F367D6BC6CA97425 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
-		7A4DED0F345B4A53076DE0BAE0EBB36C /* FLDataCenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FLDataCenter.swift; sourceTree = "<group>"; };
 		7BD1D581B483AF8736F68B34656AEA1F /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
 		8C208BD2418B38199D932444228512CF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		8CB2D3F12EF669A8508FC9ABEF85F2AD /* Pods-FLNetworkManager_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FLNetworkManager_Tests-frameworks.sh"; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 				079C5A2A1EB898D100D573D7 /* ErrorCodes.json */,
 				079C5A2B1EB898D100D573D7 /* FLError.swift */,
 				079C5A2C1EB898D100D573D7 /* FLErrorJSON.swift */,
+				079C5A6F1EB9374400D573D7 /* FLConstants.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -239,8 +242,8 @@
 		389F42CB01DEAB632F0D7939ED8CCE0C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				500D680FE79BA6C014A18544B9A75C2F /* FLDataCenterProtocol.swift */,
-				7A4DED0F345B4A53076DE0BAE0EBB36C /* FLDataCenter.swift */,
+				500D680FE79BA6C014A18544B9A75C2F /* FLDataCenter.swift */,
+				079C5A6D1EB9371300D573D7 /* FLBaseRequest.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -653,8 +656,9 @@
 				079C5A281EB897EB00D573D7 /* FLMeta.swift in Sources */,
 				079C5A301EB8990300D573D7 /* FLErrorJSON.swift in Sources */,
 				079C5A2F1EB8990000D573D7 /* FLError.swift in Sources */,
-				99ED7F68A691E1DAFAA349A622E0BF20 /* FLDataCenter.swift in Sources */,
-				F40334C736588F3EE5102C4735C92FC3 /* FLDataCenterProtocol.swift in Sources */,
+				079C5A6E1EB9371300D573D7 /* FLBaseRequest.swift in Sources */,
+				079C5A701EB9374400D573D7 /* FLConstants.swift in Sources */,
+				F40334C736588F3EE5102C4735C92FC3 /* FLDataCenter.swift in Sources */,
 				CEFBE67C6ABE47A7A4D394D612C458B9 /* FLNetworkManager-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

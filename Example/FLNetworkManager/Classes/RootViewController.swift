@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FLNetworkManager
 
 class RootViewController: UIViewController {
 
@@ -17,5 +18,21 @@ class RootViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
+    
 }
+
+
+class LoginModel{}
+
+class LoginRequest:BaseRequest {
+    override var path: String {
+        return "/Login"
+    }
+    override var parameters: [String : Any] {
+        return [:]
+    }
+    override var headers: [String : String] {
+        return [:]
+    }
+}
+

@@ -42,5 +42,4 @@ public struct FLResponse<T> {
         if response != nil { dictionary[kFLResponseResponseKey] = response.flatMap({$0}) }
         return dictionary
     }
-    
 }
