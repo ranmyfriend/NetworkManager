@@ -26,11 +26,11 @@
     s.license          = { :type => 'MIT', :file => 'LICENSE' }
     s.author           = { 'ranjith2010' => 'ranjith@f22labs.com' }
     s.source           = { :git => 'https://github.com/ranjith2010/FLNetworkManager.git', :tag => s.version.to_s }
-    # s.social_media_url = 'https://twitter.com/<ranmyfriend>'
+    # s.social_media_url = 'https://twitter.com/ranmyfriend'
 
     s.ios.deployment_target = '9.1'
 
-    s.source_files = 'FLNetworkManager/Classes/**/*'
+    s.source_files = 'FLNetworkManager/**/*'
 
     # s.resource_bundles = {
     #   'FLNetworkManager' => ['FLNetworkManager/Assets/*.png']
