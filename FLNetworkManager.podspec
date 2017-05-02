@@ -21,7 +21,7 @@
     TODO: Add long description of the pod here.
     DESC
 
-    s.homepage         = 'https://github.com/shanthakumarf22/FLNetworkManager'
+    s.homepage         = 'https://github.com/ranjith2010/FLNetworkManager'
     # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
     s.license          = { :type => 'MIT', :file => 'LICENSE' }
     s.author           = { 'ranjith2010' => 'ranjith@f22labs.com' }
