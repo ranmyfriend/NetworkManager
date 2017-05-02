@@ -22,7 +22,7 @@ pod "FLNetworkManager"
 
 ## Author
 
-shanthakumarf22, ranjith@f22labs.com
+ranjith@f22labs.com
 
 ## License
 
