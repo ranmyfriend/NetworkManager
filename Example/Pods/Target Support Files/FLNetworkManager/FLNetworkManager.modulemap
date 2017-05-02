@@ -1,0 +1,6 @@
+framework module FLNetworkManager {
+  umbrella header "FLNetworkManager-umbrella.h"
+
+  export *
+  module * { export * }
+}

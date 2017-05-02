@@ -1,0 +1,30 @@
+{
+  "name": "FLNetworkManager",
+  "version": "0.1.0",
+  "summary": "A short description of FLNetworkManager.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/shanthakumarf22/FLNetworkManager",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "ranjith2010": "ranjith@f22labs.com"
+  },
+  "source": {
+    "git": "https://github.com/ranjith2010/FLNetworkManager.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.1"
+  },
+  "source_files": "FLNetworkManager/Classes/**/*",
+  "dependencies": {
+    "Alamofire": [
+      "~> 4.0.1"
+    ],
+    "SwiftyJSON": [
+      "3.0.0"
+    ]
+  }
+}
