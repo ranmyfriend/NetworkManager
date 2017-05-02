@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'FLNetworkManager_Example' do
+  pod 'FLNetworkManager', :path => '../'
+
+  target 'FLNetworkManager_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
