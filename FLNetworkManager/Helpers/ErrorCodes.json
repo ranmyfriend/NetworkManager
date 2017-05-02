@@ -1,0 +1,5 @@
+{
+    "200"  :   "Success!"
+    "401"  :   "Incorrect authentication credentials"
+    "500"  :   "Something went wrong, Please try again later"
+}

@@ -1,15 +1,14 @@
 import SwiftyJSON
 
-public struct FLResponse<T> {
+public struct FLMeta {
     
     // MARK: Declaration for string constants to be used to decode and also serialize.
-    private let kFLResponseMetaKey: String = "meta"
-    private let kFLResponseResponseKey: String = "response"
+    private let kFLMetaStatusKey: String = "status"
+    private let kFLMetaMessageKey: String = "message"
     
     // MARK: Properties
-    public var meta: FLMeta?
-    var error: Any?
-    public var response: T?
+    public var status: Bool = false
+    public var message: String?
     
     // MARK: SwiftyJSON Initalizers
     /**
@@ -17,8 +16,8 @@ public struct FLResponse<T> {
      - parameter object: The object of either Dictionary or Array kind that was passed.
      - returns: An initalized instance of the class.
      */
-    public init(object: Any, resp:T) {
-        self.init(json: JSON(object),resp:resp)
+    public init(object: Any) {
+        self.init(json: JSON(object))
     }
     
     /**
@@ -26,10 +25,9 @@ public struct FLResponse<T> {
      - parameter json: JSON object from SwiftyJSON.
      - returns: An initalized instance of the class.
      */
-    public init(json: JSON, resp:T) {
-        meta = FLMeta(json: json[kFLResponseMetaKey])
-        error = FLError<FLMeta>.buildError(input: meta)
-        response = resp
+    public init(json: JSON) {
+        status = json[kFLMetaStatusKey].boolValue
+        message = json[kFLMetaMessageKey].string
     }
     
     /**
@@ -38,8 +36,8 @@ public struct FLResponse<T> {
      */
     public func dictionaryRepresentation() -> [String: Any] {
         var dictionary: [String: Any] = [:]
-        if let value = meta { dictionary[kFLResponseMetaKey] = value.dictionaryRepresentation() }
-        if response != nil { dictionary[kFLResponseResponseKey] = response.flatMap({$0}) }
+        dictionary[kFLMetaStatusKey] = status
+        if let value = message { dictionary[kFLMetaMessageKey] = value }
         return dictionary
     }
     

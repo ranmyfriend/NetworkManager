@@ -38,6 +38,6 @@
 
     # s.public_header_files = 'Pod/Classes/**/*.h'
 
-    s.dependency 'Alamofire', '~> 4.0.1'
-    s.dependency 'SwiftyJSON', '3.0.0'
+    s.dependency 'Alamofire', '~> 4.4'
+    s.dependency 'SwiftyJSON', '3.1.4'
     end
