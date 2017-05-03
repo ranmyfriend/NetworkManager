@@ -10,13 +10,13 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-public enum AsyncResult<T> {
-    case success(T)
+public enum AsyncResult {
+    case success(JSON)
     case failure(Any)
 }
 
 public protocol NetworkDispatcher {
-    func execute(request: BaseRequest,completion:@escaping (AsyncResult<Any>)->())
+    func execute(request: BaseRequest,completion:@escaping (AsyncResult)->())
 }
 
 open class FLDataCenter:NetworkDispatcher {
@@ -26,26 +26,27 @@ open class FLDataCenter:NetworkDispatcher {
     
     private var sessionManager:SessionManager?
     
-    class var sharedInstance: FLDataCenter {
+    open class var shared: FLDataCenter {
         struct Static {
             static let instance: FLDataCenter = FLDataCenter()
         }
         return Static.instance
     }
     
-   private func setupConfig() {
+    private func setupConfig() {
         let configuration:URLSessionConfiguration = URLSessionConfiguration.default
         configuration.timeoutIntervalForRequest = TimeInterval(self.timeOutInterval)
         configuration.timeoutIntervalForResource = TimeInterval(self.timeOutInterval)
         self.sessionManager = Alamofire.SessionManager(configuration: configuration)
     }
     
-   open func setBaseDomain(domain:String) {
+    open func setBaseDomain(domain:String) {
         self.baseDomain = domain;
         self.setupConfig()
     }
     
-   open func execute(request: BaseRequest, completion: @escaping (AsyncResult<Any>) -> ()) {
+    open func execute(request: BaseRequest,
+                      completion: @escaping (AsyncResult) -> ()) {
         let endURL = baseDomain?.appending(request.path)
         guard let url = endURL, url.isEmpty == true else {
             debugPrint("Unable to connect to API.\nThe base url and the connecting url are empty. Use setDomain: method to set a base url or provide an endurl in this method call to connect to the API")
@@ -58,7 +59,7 @@ open class FLDataCenter:NetworkDispatcher {
             UIApplication.shared.isNetworkActivityIndicatorVisible = false
             switch(response.result) {
             case .success(_):
-                let json = JSON(response.result.value!)[StringConstants.responseKey]
+                let json = JSON(response.result.value!)
                 completion(AsyncResult.success(json))
                 break
             case .failure(_):
@@ -67,7 +68,7 @@ open class FLDataCenter:NetworkDispatcher {
         }
     }
     
-   open func executeMulti_Part(request: BaseRequest, completion: @escaping (AsyncResult<Any>) -> ()) {
+    open func executeMulti_Part(request: BaseRequest, completion: @escaping (AsyncResult) -> ()) {
         let endURL = baseDomain?.appending(request.path)
         guard let url = endURL, url.isEmpty == true else {
             debugPrint("Unable to connect to API.\nThe base url and the connecting url are empty. Use setDomain: method to set a base url or provide an endurl in this method call to connect to the API");
@@ -91,7 +92,7 @@ open class FLDataCenter:NetworkDispatcher {
             switch encodingResult {
             case .success(let upload, _, _):
                 upload.responseJSON { response in
-                    let json = JSON(response.result.value!)[StringConstants.responseKey]
+                    let json = JSON(response.result.value!)
                     completion(AsyncResult.success(json))
                 }
             case .failure(let error):

@@ -18,7 +18,7 @@
   "platforms": {
     "ios": "9.1"
   },
-  "source_files": "FLNetworkManager/Classes/**/*",
+  "source_files": "FLNetworkManager/**/*",
   "dependencies": {
     "Alamofire": [
       "~> 4.4"

@@ -21,7 +21,6 @@ open class BaseRequest:RequestProtocol {
     open var method: HTTPMethod { return .get }
     open var parameters: [String : Any]? { return [:] }
     open var headers: [String : String]? { return [:] }
-    open var requestType: Any? { return self }
     
     public init() {}
 }
