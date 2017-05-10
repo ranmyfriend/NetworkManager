@@ -8,7 +8,7 @@ public struct FLResponse<T> {
     
     // MARK: Properties
     public var meta: FLMeta?
-    var error: Any?
+    public var error: Any?
     public var response: T?
     
     // MARK: SwiftyJSON Initalizers

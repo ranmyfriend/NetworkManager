@@ -19,7 +19,7 @@ struct HudInfo {
     var position:HudPosition?
 }
 
-struct FLError<A> {
+public struct FLError<A> {
     var code:Int?
     var message:String?
     var status:Bool?
